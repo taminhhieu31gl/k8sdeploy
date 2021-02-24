@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hieuweb
+  labels:
+     run: hieuweb
+spec:
+  type: LoadBalancer
+  selector:
+    app: hieuweb
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8181
